@@ -64,14 +64,15 @@ function App() {
           {weatherData && (
             <>
               <div>
-                {weatherData.main && <p>High {weatherData.main.temp_max}°C </p>}
-                {weatherData.wind && <p>Wind {weatherData.wind.speed} mph</p>}
-                {weatherData.sys && <p>Sunrise {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString()}</p>}
+                {weatherData.main && <p><div>{Math.floor(weatherData.main.temp_max)}°</div>High</p>}
+                {weatherData.wind && <p><div>{Math.floor(weatherData.wind.speed)} mph</div>Wind</p>}
+                {weatherData.sys && <p><div>{new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString([],{ hour: "2-digit", minute: "2-digit",hour12: false })}</div>Sunrise</p>}
               </div>
               <div>
-                {weatherData.main && <p>Low {weatherData.main.temp_min}°C</p>}
-                {weatherData.clouds && <p>Rain {weatherData.clouds.all}%</p>}
-                {weatherData.sys && <p>Sunset{new Date(weatherData.sys.sunset * 1000).toLocaleTimeString()}</p>}
+                {weatherData.main && <p><div>{Math.floor(weatherData.main.temp_min)}°C</div>Low</p>}
+                {weatherData.clouds && <p><div>{Math.floor(weatherData.clouds.all)}%</div>Rain</p>}
+                {weatherData.sys && <p><div>{new Date(weatherData.sys.sunset * 1000).toLocaleTimeString(
+                  [],{ hour: "2-digit", minute: "2-digit",hour12: false })}</div>Sunset</p>}
               </div>
             </>
           )}
