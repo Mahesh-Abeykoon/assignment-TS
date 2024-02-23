@@ -1,9 +1,16 @@
+div{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p {
+  font-family:  Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .App {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(to bottom right, #333a9c, #2f5ce2);
+  background: linear-gradient(90deg, #39377e 2.34%, #67b6ce);
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -13,40 +20,50 @@
 .weather-info {
   margin-top: 30px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.left-section, .right-section {
-  width: 50%;
+.left-section{
+  width: 45%;
   padding: 20px;
   border-radius: 10px;
   text-align: left;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
 }
-
-.left-section {
-  border-right: 1px solid #fff;
+.first-section .second-section p {
+  margin-top: auto;
+  margin-right: -10px;
+  padding-right: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 100px;
 }
 
 .icon-value {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
 }
 
 .icon-value img {
-  width: 120px;
-  margin-right: 20px;
+  width: 130px;
+  margin-right: 20px; 
+  margin: auto;
 }
 
 .icon-value p {
-  font-size: 36px;
-  margin: 0;
+  font-size: 58px;
+  margin: auto;
+  margin-bottom: 1px;
 }
+.icon-value {
+  margin-top: -20px;
 
+}
 .icon-status {
   font-size: 22px;
-  margin-left: 135px;
-  font-weight: 500;
+  margin-left: 230px;
+  color: #67b6ce;
 }
 
 .error-message {
@@ -55,9 +72,30 @@
   font-size: 20px;
 }
 
+.input-field {
+  color: rgb(208, 208, 247);
+  border: 2px solid #67b6ce;
+  outline: none;
+  background-color: transparent;
+  height: 10px;
+  width: 160px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.input-field::placeholder {
+  color: #a9a9a9;
+}
+
+.input-field:focus {
+  border-color: #fff;
+}
+
 .latitude-longitude p {
   font-family: 'Arial', sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   color: white;
   margin: 10px 0;
   white-space: nowrap;
@@ -83,7 +121,7 @@
 .right-section p {
   margin: 0;
   line-height: 1.5;
-  font-size: 24px;
+  font-size: 18px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -96,7 +134,7 @@
 
 .right-section div {
   width: 100%;
-  display: -webkit-flex;
+  display: flex;
   justify-content: left;
 }
 
