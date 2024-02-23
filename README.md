@@ -17,8 +17,18 @@ This is a simple weather application built with React.js that allows users to fe
 
 ## Usage
 
-1. Clone the repository:
+### 1. Clone the repository:
 
 ```bash
 git clone https://github.com/Mahesh-Abeykoon/assignment-TS.git
 ```
+### 2. Install dependencies:
+```console
+cd weather-app (assignment-TS)
+npm install
+```
+### 3.Run the application:
+```console
+npm start
+```
+> Navigate to http://localhost:3000 in your web browser to use the weather app.
